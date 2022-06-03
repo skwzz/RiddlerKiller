@@ -11,23 +11,21 @@ public class BOJ_1546 {
         StringBuilder sb = new StringBuilder();
         System.out.println(50/70.0);
         int n = Integer.parseInt(br.readLine());
-        long[] arr = new long[n];
-        int max =  Integer.MIN_VALUE;
+        double[] arr = new double[n];
+        double max =  -1;
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0; i<n; i++){
-            int k = Integer.parseInt(st.nextToken());
+            double k = Double.parseDouble(st.nextToken());
             arr[i] = k;
             if(max < k){
                 max = k;
             }
         }
-        System.out.println("MAX:"+max);
-        int sum = 0;
+        double t = 0;
         for(int i=0; i<n; i++){
-            System.out.println((arr[i] / max));
-            arr[i] = (arr[i] / max) * 100;
-            sum += arr[i];
+            t += (arr[i] / max) * 100;
         }
+        System.out.println(t/n);
     }
 }
