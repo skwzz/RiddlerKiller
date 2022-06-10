@@ -1,4 +1,4 @@
-package solving;
+package baekjoon.string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
