@@ -1,4 +1,4 @@
-package solving;
+package baekjoon.math;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,10 +21,8 @@ public class BOJ_10250 {
             int w = Integer.parseInt(st.nextToken()); // 넓이
             int n = Integer.parseInt(st.nextToken()); // 몇번째입장
 
-            // 6 12 10 -> 402
-            // 30 50 72 -> 1203
-            int a = n%h;
-            int b = n/h+1;
+            int a = n%h;   //층에 대한 호수
+            int b = n/h+1; //특정 층의 왼쪽부터 호수
             if(a==0){
                 a = h;
                 b = n/h;
